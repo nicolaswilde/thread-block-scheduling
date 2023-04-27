@@ -1,0 +1,620 @@
+make clean -C kernels
+make[1]: Entering directory '/root/block-scheduling/kernels'
+rm -f *.a *.o
+make[1]: Leaving directory '/root/block-scheduling/kernels'
+rm -f result/*.nsys-rep
+make clean -C kernels
+make[1]: Entering directory '/root/block-scheduling/kernels'
+rm -f *.a *.o
+make[1]: Leaving directory '/root/block-scheduling/kernels'
+make -C kernels
+make[1]: Entering directory '/root/block-scheduling/kernels'
+rm -f *.a *.o
+rm -f *.o
+nvcc -c kernel_r24.cu  -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=24
+nvcc -c kernel_r32.cu  -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=32
+nvcc -c kernel_r40.cu  -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=40
+nvcc -c kernel_r41.cu  -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=41
+nvcc -c kernel_r48.cu  -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=48
+nvcc -c kernel_r56.cu  -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=56
+nvcc -c kernel_r64.cu  -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=64
+nvcc -c kernel_r72.cu  -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=72
+nvcc -c kernel_r80.cu  -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=80
+nvcc -c kernel_r88.cu  -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=88
+nvcc -c kernel_r96.cu  -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=96
+nvcc -c kernel_r104.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=104
+nvcc -c kernel_r112.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=112
+nvcc -c kernel_r120.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=120
+nvcc -c kernel_r128.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=128
+nvcc -c kernel_r136.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=136
+nvcc -c kernel_r144.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=144
+nvcc -c kernel_r152.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=152
+nvcc -c kernel_r160.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=160
+nvcc -c kernel_r168.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=168
+nvcc -c kernel_r176.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=176
+nvcc -c kernel_r184.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=184
+nvcc -c kernel_r192.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=192
+nvcc -c kernel_r200.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=200
+nvcc -c kernel_r208.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=208
+nvcc -c kernel_r216.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=216
+nvcc -c kernel_r224.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=224
+nvcc -c kernel_r232.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=232
+nvcc -c kernel_r240.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=240
+nvcc -c kernel_r248.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=248
+nvcc -c kernel_r255.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include -maxrregcount=255
+nvcc -c invoke_kernel.cu -arch=compute_70 -code=sm_70 --ptxas-options=-v -I../include
+nvcc -dlink -o kernels.o *.o -lcublas -lcudnn -arch=compute_70 -code=sm_70
+ar cr libkernels_70.a *.o
+rm -f *.o
+rm -f *.o
+nvcc -c kernel_r24.cu  -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=24
+nvcc -c kernel_r32.cu  -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=32
+nvcc -c kernel_r40.cu  -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=40
+nvcc -c kernel_r41.cu  -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=41
+nvcc -c kernel_r48.cu  -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=48
+nvcc -c kernel_r56.cu  -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=56
+nvcc -c kernel_r64.cu  -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=64
+nvcc -c kernel_r72.cu  -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=72
+nvcc -c kernel_r80.cu  -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=80
+nvcc -c kernel_r88.cu  -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=88
+nvcc -c kernel_r96.cu  -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=96
+nvcc -c kernel_r104.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=104
+nvcc -c kernel_r112.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=112
+nvcc -c kernel_r120.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=120
+nvcc -c kernel_r128.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=128
+nvcc -c kernel_r136.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=136
+nvcc -c kernel_r144.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=144
+nvcc -c kernel_r152.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=152
+nvcc -c kernel_r160.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=160
+nvcc -c kernel_r168.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=168
+nvcc -c kernel_r176.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=176
+nvcc -c kernel_r184.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=184
+nvcc -c kernel_r192.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=192
+nvcc -c kernel_r200.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=200
+nvcc -c kernel_r208.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=208
+nvcc -c kernel_r216.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=216
+nvcc -c kernel_r224.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=224
+nvcc -c kernel_r232.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=232
+nvcc -c kernel_r240.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=240
+nvcc -c kernel_r248.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=248
+nvcc -c kernel_r255.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include -maxrregcount=255
+nvcc -c invoke_kernel.cu -arch=compute_75 -code=sm_75 --ptxas-options=-v -I../include
+nvcc -dlink -o kernels.o *.o -lcublas -lcudnn -arch=compute_75 -code=sm_75
+ar cr libkernels_75.a *.o
+rm -f *.o
+rm -f *.o
+nvcc -c kernel_r24.cu  -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=24
+nvcc -c kernel_r32.cu  -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=32
+nvcc -c kernel_r40.cu  -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=40
+nvcc -c kernel_r41.cu  -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=41
+nvcc -c kernel_r48.cu  -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=48
+nvcc -c kernel_r56.cu  -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=56
+nvcc -c kernel_r64.cu  -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=64
+nvcc -c kernel_r72.cu  -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=72
+nvcc -c kernel_r80.cu  -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=80
+nvcc -c kernel_r88.cu  -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=88
+nvcc -c kernel_r96.cu  -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=96
+nvcc -c kernel_r104.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=104
+nvcc -c kernel_r112.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=112
+nvcc -c kernel_r120.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=120
+nvcc -c kernel_r128.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=128
+nvcc -c kernel_r136.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=136
+nvcc -c kernel_r144.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=144
+nvcc -c kernel_r152.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=152
+nvcc -c kernel_r160.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=160
+nvcc -c kernel_r168.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=168
+nvcc -c kernel_r176.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=176
+nvcc -c kernel_r184.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=184
+nvcc -c kernel_r192.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=192
+nvcc -c kernel_r200.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=200
+nvcc -c kernel_r208.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=208
+nvcc -c kernel_r216.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=216
+nvcc -c kernel_r224.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=224
+nvcc -c kernel_r232.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=232
+nvcc -c kernel_r240.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=240
+nvcc -c kernel_r248.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=248
+nvcc -c kernel_r255.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include -maxrregcount=255
+nvcc -c invoke_kernel.cu -arch=compute_80 -code=sm_80 --ptxas-options=-v -I../include
+nvcc -dlink -o kernels.o *.o -lcublas -lcudnn -arch=compute_80 -code=sm_80
+ar cr libkernels_80.a *.o
+rm -f *.o
+rm -f *.o
+nvcc -c kernel_r24.cu  -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=24
+nvcc -c kernel_r32.cu  -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=32
+nvcc -c kernel_r40.cu  -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=40
+nvcc -c kernel_r41.cu  -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=41
+nvcc -c kernel_r48.cu  -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=48
+nvcc -c kernel_r56.cu  -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=56
+nvcc -c kernel_r64.cu  -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=64
+nvcc -c kernel_r72.cu  -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=72
+nvcc -c kernel_r80.cu  -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=80
+nvcc -c kernel_r88.cu  -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=88
+nvcc -c kernel_r96.cu  -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=96
+nvcc -c kernel_r104.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=104
+nvcc -c kernel_r112.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=112
+nvcc -c kernel_r120.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=120
+nvcc -c kernel_r128.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=128
+nvcc -c kernel_r136.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=136
+nvcc -c kernel_r144.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=144
+nvcc -c kernel_r152.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=152
+nvcc -c kernel_r160.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=160
+nvcc -c kernel_r168.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=168
+nvcc -c kernel_r176.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=176
+nvcc -c kernel_r184.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=184
+nvcc -c kernel_r192.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=192
+nvcc -c kernel_r200.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=200
+nvcc -c kernel_r208.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=208
+nvcc -c kernel_r216.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=216
+nvcc -c kernel_r224.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=224
+nvcc -c kernel_r232.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=232
+nvcc -c kernel_r240.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=240
+nvcc -c kernel_r248.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=248
+nvcc -c kernel_r255.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include -maxrregcount=255
+nvcc -c invoke_kernel.cu -arch=compute_86 -code=sm_86 --ptxas-options=-v -I../include
+nvcc -dlink -o kernels.o *.o -lcublas -lcudnn -arch=compute_86 -code=sm_86
+ar cr libkernels_86.a *.o
+rm -f *.o
+make[1]: Leaving directory '/root/block-scheduling/kernels'
+make clean -C test1
+make[1]: Entering directory '/root/block-scheduling/test1'
+rm -f test1 *.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test1'
+make -C test1 GPGPU=V100
+make[1]: Entering directory '/root/block-scheduling/test1'
+nvcc test1.cu -o test1 -arch=compute_70 -code=sm_70 --ptxas-options=-v -L../kernels -lkernels_70 -I../include -DV100
+make[1]: Leaving directory '/root/block-scheduling/test1'
+make profile -C test1
+make[1]: Entering directory '/root/block-scheduling/test1'
+nsys profile -t cuda --stats false -f true -w true -o test1 ./test1
+================================================================================
+Test1 ==========================================================================
+K1 = K(160, 1024, 32, 0 Bytes), last block 1s, other blocks 2s, stream1
+K2 = K(2, 1024, 32, 0 Bytes), all blocks 1s,                  stream2
+================================================================================
+Generating '/tmp/nsys-report-1a02.qdstrm'
+[1/1] [0%                          ] test1.nsys-rep[1/1] [0%                          ] test1.nsys-rep[1/1] [10%                         ] test1.nsys-rep[1/1] [============56%             ] test1.nsys-rep[1/1] [===============66%          ] test1.nsys-rep[1/1] [================68%         ] test1.nsys-rep[1/1] [================69%         ] test1.nsys-rep[1/1] [========================100%] test1.nsys-rep[1/1] [========================100%] test1.nsys-rep
+Generated:
+    /root/block-scheduling/test1/test1.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test1'
+mkdir -p result
+mv test1/test1.nsys-rep result/test1_V100.nsys-rep
+make clean -C test2
+make[1]: Entering directory '/root/block-scheduling/test2'
+rm -f test2 *.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test2'
+make -C test2 GPGPU=V100
+make[1]: Entering directory '/root/block-scheduling/test2'
+nvcc test2.cu -o test2 -arch=compute_70 -code=sm_70 --ptxas-options=-v -L../kernels -lkernels_70 -I../include -DV100
+make[1]: Leaving directory '/root/block-scheduling/test2'
+make profile -C test2
+make[1]: Entering directory '/root/block-scheduling/test2'
+nsys profile -t cuda --stats false -f true -w true -o test2 ./test2
+================================================================================
+Test2 ==========================================================================
+K1 = K(160, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(164, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(165, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(166, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(167, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(168, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(238, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(239, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(240, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(241, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(242, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(318, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(319, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(320, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(321, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(322, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(400, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(480, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(560, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79
+================================================================================
+================================================================================
+Test2 ==========================================================================
+K1 = K(640, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79
+================================================================================
+Generating '/tmp/nsys-report-41f5.qdstrm'
+[1/1] [0%                          ] test2.nsys-rep[1/1] [0%                          ] test2.nsys-rep[1/1] [===================79%      ] test2.nsys-rep[1/1] [========================100%] test2.nsys-rep[1/1] [========================100%] test2.nsys-rep
+Generated:
+    /root/block-scheduling/test2/test2.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test2'
+mkdir -p result
+mv test2/test2.nsys-rep result/test2_V100.nsys-rep
+make clean -C test3
+make[1]: Entering directory '/root/block-scheduling/test3'
+rm -f test3 *.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test3'
+make -C test3 GPGPU=V100
+make[1]: Entering directory '/root/block-scheduling/test3'
+nvcc test3.cu -o test3 -arch=compute_70 -code=sm_70 --ptxas-options=-v -L../kernels -lkernels_70 -I../include -DV100
+make[1]: Leaving directory '/root/block-scheduling/test3'
+make profile -C test3
+make[1]: Entering directory '/root/block-scheduling/test3'
+nsys profile -t cuda --stats false -f true -w true -o test3 ./test3
+================================================================================
+Test3 ==========================================================================
+K1 = K(161, 992, 32, 0 Bytes), all blocks 1s, stream1
+K2 = K(1, 32, 32, 0 Bytes), all blocks 1s, stream2
+================================================================================
+Generating '/tmp/nsys-report-dd53.qdstrm'
+[1/1] [0%                          ] test3.nsys-rep[1/1] [0%                          ] test3.nsys-rep[1/1] [=========46%                ] test3.nsys-rep[1/1] [============56%             ] test3.nsys-rep[1/1] [===============66%          ] test3.nsys-rep[1/1] [================68%         ] test3.nsys-rep[1/1] [================69%         ] test3.nsys-rep[1/1] [========================100%] test3.nsys-rep[1/1] [========================100%] test3.nsys-rep
+Generated:
+    /root/block-scheduling/test3/test3.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test3'
+mkdir -p result
+mv test3/test3.nsys-rep result/test3_V100.nsys-rep
+make clean -C test4
+make[1]: Entering directory '/root/block-scheduling/test4'
+rm -f test4 *.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test4'
+make -C test4 GPGPU=V100
+make[1]: Entering directory '/root/block-scheduling/test4'
+nvcc test4.cu -o test4 -arch=compute_70 -code=sm_70 --ptxas-options=-v -L../kernels -lkernels_70 -I../include -DV100
+make[1]: Leaving directory '/root/block-scheduling/test4'
+make profile -C test4
+make[1]: Entering directory '/root/block-scheduling/test4'
+nsys profile -t cuda --stats false -f true -w true -o test4 ./test4
+================================================================================
+Test4 ==========================================================================
+K1 = K(160, 1024, 32, 0 Bytes), all blocks 1s, stream1
+K2 = K(160, 1024, 32, 0 Bytes), all blocks 1s, stream1
+K3 = K(160, 1024, 32, 0 Bytes), all blocks 1s, stream2
+K4 = K(160, 1024, 32, 0 Bytes), all blocks 1s, stream3
+================================================================================
+Generating '/tmp/nsys-report-ca2a.qdstrm'
+[1/1] [0%                          ] test4.nsys-rep[1/1] [0%                          ] test4.nsys-rep[1/1] [7%                          ] test4.nsys-rep[1/1] [=15%                        ] test4.nsys-rep[1/1] [================70%         ] test4.nsys-rep[1/1] [=================72%        ] test4.nsys-rep[1/1] [=================73%        ] test4.nsys-rep[1/1] [========================100%] test4.nsys-rep[1/1] [========================100%] test4.nsys-rep
+Generated:
+    /root/block-scheduling/test4/test4.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test4'
+mkdir -p result
+mv test4/test4.nsys-rep result/test4_V100.nsys-rep
+make clean -C test5
+make[1]: Entering directory '/root/block-scheduling/test5'
+rm -f test5 *.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test5'
+make -C test5 GPGPU=V100
+make[1]: Entering directory '/root/block-scheduling/test5'
+nvcc test5.cu -o test5 -arch=compute_70 -code=sm_70 --ptxas-options=-v -L../kernels -lkernels_70 -I../include -DV100
+make[1]: Leaving directory '/root/block-scheduling/test5'
+make profile -C test5
+make[1]: Entering directory '/root/block-scheduling/test5'
+nsys profile -t cuda --stats false -f true -w true -o test5 ./test5
+================================================================================
+Test5 ==========================================================================
+K1 = K(160, 1024, 32, 0 Bytes), all blocks 1s, stream1 (high priority)
+K2 = K(160, 1024, 32, 0 Bytes), all blocks 1s, stream2 ( low priority)
+K3 = K(160, 1024, 32, 0 Bytes), all blocks 1s, stream1 (high priority)
+K4 = K(160, 1024, 32, 0 Bytes), all blocks 1s, stream3 ( low priority)
+================================================================================
+Device Stream Priority: [0(lowest), -5(highest)]
+Generating '/tmp/nsys-report-95c3.qdstrm'
+[1/1] [0%                          ] test5.nsys-rep[1/1] [0%                          ] test5.nsys-rep[1/1] [7%                          ] test5.nsys-rep[1/1] [=15%                        ] test5.nsys-rep[1/1] [================70%         ] test5.nsys-rep[1/1] [=================72%        ] test5.nsys-rep[1/1] [=================73%        ] test5.nsys-rep[1/1] [========================100%] test5.nsys-rep[1/1] [========================100%] test5.nsys-rep
+Generated:
+    /root/block-scheduling/test5/test5.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test5'
+mkdir -p result
+mv test5/test5.nsys-rep result/test5_V100.nsys-rep
+make clean -C test6
+make[1]: Entering directory '/root/block-scheduling/test6'
+rm -f test6 *.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test6'
+make -C test6 GPGPU=V100
+make[1]: Entering directory '/root/block-scheduling/test6'
+nvcc test6.cu -o test6 -arch=compute_70 -code=sm_70 --ptxas-options=-v -L../kernels -lkernels_70 -I../include -DV100
+make[1]: Leaving directory '/root/block-scheduling/test6'
+make profile -C test6
+make[1]: Entering directory '/root/block-scheduling/test6'
+nsys profile -t cuda --stats false -f true -w true -o test6 ./test6
+================================================================================
+Test6 ==========================================================================
+Ki = K(1, 32, 32, 0 Bytes), all blocks 1s, streami
+, i = 0-129================================================================================
+Generating '/tmp/nsys-report-1d49.qdstrm'
+[1/1] [0%                          ] test6.nsys-rep[1/1] [0%                          ] test6.nsys-rep[1/1] [====================83%     ] test6.nsys-rep[1/1] [========================100%] test6.nsys-rep[1/1] [========================100%] test6.nsys-rep
+Generated:
+    /root/block-scheduling/test6/test6.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test6'
+mkdir -p result
+mv test6/test6.nsys-rep result/test6_V100.nsys-rep
+make clean -C test7
+make[1]: Entering directory '/root/block-scheduling/test7'
+rm -f test7 *.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test7'
+make -C test7 GPGPU=V100
+make[1]: Entering directory '/root/block-scheduling/test7'
+nvcc test7.cu -o test7 -arch=compute_70 -code=sm_70 --ptxas-options=-v -L../kernels -lkernels_70 -I../include -DV100
+make[1]: Leaving directory '/root/block-scheduling/test7'
+make profile -C test7
+make[1]: Entering directory '/root/block-scheduling/test7'
+nsys profile -t cuda --stats false -f true -w true -o test7 ./test7
+================================================================================
+Test7 ==========================================================================
+K1 = K(80, 32, 32, 0 Bytes), all blocks 1s, stream1
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79
+================================================================================
+Generating '/tmp/nsys-report-848d.qdstrm'
+[1/1] [0%                          ] test7.nsys-rep[1/1] [0%                          ] test7.nsys-rep[1/1] [11%                         ] test7.nsys-rep[1/1] [===22%                      ] test7.nsys-rep[1/1] [==============62%           ] test7.nsys-rep[1/1] [==============63%           ] test7.nsys-rep[1/1] [===============66%          ] test7.nsys-rep[1/1] [===============67%          ] test7.nsys-rep[1/1] [========================100%] test7.nsys-rep[1/1] [========================100%] test7.nsys-rep
+Generated:
+    /root/block-scheduling/test7/test7.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test7'
+mkdir -p result
+mv test7/test7.nsys-rep result/test7_V100.nsys-rep
+make clean -C test8
+make[1]: Entering directory '/root/block-scheduling/test8'
+rm -f test8 *.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test8'
+make -C test8 GPGPU=V100
+make[1]: Entering directory '/root/block-scheduling/test8'
+nvcc test8.cu -o test8 -arch=compute_70 -code=sm_70 --ptxas-options=-v -L../kernels -lkernels_70 -I../include -DV100
+make[1]: Leaving directory '/root/block-scheduling/test8'
+make profile -C test8
+make[1]: Entering directory '/root/block-scheduling/test8'
+nsys profile -t cuda --stats false -f true -w true -o test8 ./test8
+================================================================================
+Test8 ==========================================================================
+K1 = K(40, 256, 128, 0 Bytes), all blocks 1s, stream1
+K2 = K(40, 256, 128, 0 Bytes), all blocks 1s, stream2
+K3 = K(40, 256, 128, 0 Bytes), all blocks 1s, stream3
+================================================================================
+K1 smid = 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78
+K2 smid = 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79
+K3 smid = 1
+================================================================================
+Generating '/tmp/nsys-report-79df.qdstrm'
+[1/1] [0%                          ] test8.nsys-rep[1/1] [0%                          ] test8.nsys-rep[1/1] [8%                          ] test8.nsys-rep[1/1] [=16%                        ] test8.nsys-rep[1/1] [================69%         ] test8.nsys-rep[1/1] [================71%         ] test8.nsys-rep[1/1] [========================100%] test8.nsys-rep[1/1] [========================100%] test8.nsys-rep
+Generated:
+    /root/block-scheduling/test8/test8.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test8'
+mkdir -p result
+mv test8/test8.nsys-rep result/test8_V100.nsys-rep
+make clean -C test9
+make[1]: Entering directory '/root/block-scheduling/test9'
+rm -f test9 *.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test9'
+make -C test9 GPGPU=V100
+make[1]: Entering directory '/root/block-scheduling/test9'
+nvcc test9.cu -o test9 -arch=compute_70 -code=sm_70 --ptxas-options=-v -L../kernels -lkernels_70 -I../include -DV100
+make[1]: Leaving directory '/root/block-scheduling/test9'
+make profile -C test9
+make[1]: Entering directory '/root/block-scheduling/test9'
+nsys profile -t cuda --stats false -f true -w true -o test9 ./test9
+================================================================================
+Test9 ==========================================================================
+K1 = K(320, 320, 41, 0 Bytes), all blocks 1s, stream1
+K2 = K(320, 352, 41, 0 Bytes), all blocks 1s, stream2
+================================================================================
+Generating '/tmp/nsys-report-161d.qdstrm'
+[1/1] [0%                          ] test9.nsys-rep[1/1] [0%                          ] test9.nsys-rep[1/1] [10%                         ] test9.nsys-rep[1/1] [==20%                       ] test9.nsys-rep[1/1] [===============66%          ] test9.nsys-rep[1/1] [================68%         ] test9.nsys-rep[1/1] [================69%         ] test9.nsys-rep[1/1] [========================100%] test9.nsys-rep[1/1] [========================100%] test9.nsys-rep
+Generated:
+    /root/block-scheduling/test9/test9.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test9'
+mkdir -p result
+mv test9/test9.nsys-rep result/test9_V100.nsys-rep
+make clean -C test10
+make[1]: Entering directory '/root/block-scheduling/test10'
+rm -f test10 *.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test10'
+make -C test10 GPGPU=V100
+make[1]: Entering directory '/root/block-scheduling/test10'
+nvcc test10.cu -o test10 -arch=compute_70 -code=sm_70 --ptxas-options=-v -L../kernels -lkernels_70 -I../include -DV100
+make[1]: Leaving directory '/root/block-scheduling/test10'
+make profile -C test10
+make[1]: Entering directory '/root/block-scheduling/test10'
+nsys profile -t cuda --stats false -f true -w true -o test10 ./test10
+================================================================================
+Test10 ==========================================================================
+K1 = K(80, 128, 64, 0 Bytes), all blocks 1s, stream1
+K2 = K(80, 128, 64, 0 Bytes), all blocks 1s, stream2
+K3 = K(80, 128, 64, 0 Bytes), all blocks 1s, stream3
+K4 = K(80, 128, 64, 0 Bytes), all blocks 1s, stream4
+K5 = K(80, 128, 64, 0 Bytes), all blocks 1s, stream5
+K6 = K(80, 128, 64, 0 Bytes), all blocks 1s, stream6
+K7 = K(80, 128, 64, 0 Bytes), all blocks 1s, stream7
+K8 = K(80, 128, 64, 0 Bytes), all blocks 1s, stream8
+K9 = K(80, 128, 255, 0 Bytes), all blocks 1s, stream9
+================================================================================
+Generating '/tmp/nsys-report-f8a1.qdstrm'
+[1/1] [0%                          ] test10.nsys-rep[1/1] [0%                          ] test10.nsys-rep[1/1] [9%                          ] test10.nsys-rep[1/1] [==================75%       ] test10.nsys-rep[1/1] [==================76%       ] test10.nsys-rep[1/1] [==================77%       ] test10.nsys-rep[1/1] [========================100%] test10.nsys-rep[1/1] [========================100%] test10.nsys-rep
+Generated:
+    /root/block-scheduling/test10/test10.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test10'
+mkdir -p result
+mv test10/test10.nsys-rep result/test10_V100.nsys-rep
+make clean -C test11
+make[1]: Entering directory '/root/block-scheduling/test11'
+rm -f test11 *.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test11'
+make -C test11 GPGPU=V100
+make[1]: Entering directory '/root/block-scheduling/test11'
+nvcc test11.cu -o test11 -arch=compute_70 -code=sm_70 --ptxas-options=-v -L../kernels -lkernels_70 -I../include -DV100
+make[1]: Leaving directory '/root/block-scheduling/test11'
+make profile -C test11
+make[1]: Entering directory '/root/block-scheduling/test11'
+nsys profile -t cuda --stats false -f true -w true -o test11 ./test11
+================================================================================
+Test11 ==========================================================================
+K1 = K(1, 1, 32, 0 Bytes), all blocks 1s, stream1
+K2 = K(1, 1, 24, 0 Bytes), all blocks 1s, stream2
+================================================================================
+Generating '/tmp/nsys-report-4525.qdstrm'
+[1/1] [0%                          ] test11.nsys-rep[1/1] [0%                          ] test11.nsys-rep[1/1] [9%                          ] test11.nsys-rep[1/1] [==19%                       ] test11.nsys-rep[1/1] [===============66%          ] test11.nsys-rep[1/1] [================68%         ] test11.nsys-rep[1/1] [================69%         ] test11.nsys-rep[1/1] [========================100%] test11.nsys-rep[1/1] [========================100%] test11.nsys-rep
+Generated:
+    /root/block-scheduling/test11/test11.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test11'
+mkdir -p result
+mv test11/test11.nsys-rep result/test11_V100.nsys-rep
+make clean -C test12
+make[1]: Entering directory '/root/block-scheduling/test12'
+rm -f test12 *.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test12'
+make -C test12 GPGPU=V100
+make[1]: Entering directory '/root/block-scheduling/test12'
+nvcc test12.cu -o test12 -arch=compute_70 -code=sm_70 --ptxas-options=-v -L../kernels -lkernels_70 -I../include -DV100
+make[1]: Leaving directory '/root/block-scheduling/test12'
+make profile -C test12
+make[1]: Entering directory '/root/block-scheduling/test12'
+nsys profile -t cuda --stats false -f true -w true -o test12 ./test12
+================================================================================
+Test12 ==========================================================================
+K1 = K(80, 128, 32, 0 Bytes), all blocks 1s, stream1
+K2 = K(80, 160, 128, 0 Bytes), all blocks 1s, stream2
+K3 = K(80, 128, 64, 0 Bytes), all blocks 1s, stream3
+K4 = K(80, 128, 224, 0 Bytes), all blocks 1s, stream4
+================================================================================
+Generating '/tmp/nsys-report-9c14.qdstrm'
+[1/1] [0%                          ] test12.nsys-rep[1/1] [0%                          ] test12.nsys-rep[1/1] [7%                          ] test12.nsys-rep[1/1] [14%                         ] test12.nsys-rep[1/1] [================70%         ] test12.nsys-rep[1/1] [================71%         ] test12.nsys-rep[1/1] [=================72%        ] test12.nsys-rep[1/1] [========================100%] test12.nsys-rep[1/1] [========================100%] test12.nsys-rep
+Generated:
+    /root/block-scheduling/test12/test12.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test12'
+mkdir -p result
+mv test12/test12.nsys-rep result/test12_V100.nsys-rep
+make clean -C test13
+make[1]: Entering directory '/root/block-scheduling/test13'
+rm -f test13 *.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test13'
+make -C test13 GPGPU=V100
+make[1]: Entering directory '/root/block-scheduling/test13'
+nvcc test13.cu -o test13 -arch=compute_70 -code=sm_70 --ptxas-options=-v -L../kernels -lkernels_70 -I../include -DV100
+make[1]: Leaving directory '/root/block-scheduling/test13'
+make profile -C test13
+make[1]: Entering directory '/root/block-scheduling/test13'
+nsys profile -t cuda --stats false -f true -w true -o test13 ./test13
+================================================================================
+Test13 ==========================================================================
+K1 = K(40, 1, 32, 0 Bytes), all blocks 1s, stream1
+K2 = K(40, 1, 32, 1024 Bytes), all blocks 1s, stream2
+================================================================================
+Generating '/tmp/nsys-report-4585.qdstrm'
+[1/1] [0%                          ] test13.nsys-rep[1/1] [0%                          ] test13.nsys-rep[1/1] [10%                         ] test13.nsys-rep[1/1] [==20%                       ] test13.nsys-rep[1/1] [===============66%          ] test13.nsys-rep[1/1] [================68%         ] test13.nsys-rep[1/1] [================69%         ] test13.nsys-rep[1/1] [========================100%] test13.nsys-rep[1/1] [========================100%] test13.nsys-rep
+Generated:
+    /root/block-scheduling/test13/test13.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test13'
+mkdir -p result
+mv test13/test13.nsys-rep result/test13_V100.nsys-rep
+make clean -C test14
+make[1]: Entering directory '/root/block-scheduling/test14'
+rm -f test14 *.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test14'
+make -C test14 GPGPU=V100
+make[1]: Entering directory '/root/block-scheduling/test14'
+nvcc test14.cu -o test14 -arch=compute_70 -code=sm_70 --ptxas-options=-v -L../kernels -lkernels_70 -I../include -DV100
+make[1]: Leaving directory '/root/block-scheduling/test14'
+make profile -C test14
+make[1]: Entering directory '/root/block-scheduling/test14'
+nsys profile -t cuda --stats false -f true -w true -o test14 ./test14
+================================================================================
+Test14 =========================================================================
+K1 = K(80, 32, 32, 11264 Bytes), all blocks 1s, stream1
+K2 = K(80, 32, 32, 11264 Bytes), all blocks 1s, stream2
+K3 = K(80, 32, 32, 11264 Bytes), all blocks 1s, stream3
+K4 = K(80, 32, 32, 11264 Bytes), all blocks 1s, stream4
+K5 = K(80, 32, 32, 11264 Bytes), all blocks 1s, stream5
+K6 = K(80, 32, 32, 11264 Bytes), all blocks 1s, stream6
+K7 = K(80, 32, 32, 11264 Bytes), all blocks 1s, stream7
+K8 = K(80, 32, 32, 11264 Bytes), all blocks 1s, stream8
+K9 = K(80, 32, 32, 48128 Bytes), all blocks 1s, stream9
+================================================================================
+Generating '/tmp/nsys-report-a966.qdstrm'
+[1/1] [0%                          ] test14.nsys-rep[1/1] [0%                          ] test14.nsys-rep[1/1] [9%                          ] test14.nsys-rep[1/1] [==================76%       ] test14.nsys-rep[1/1] [==================77%       ] test14.nsys-rep[1/1] [========================100%] test14.nsys-rep[1/1] [========================100%] test14.nsys-rep
+Generated:
+    /root/block-scheduling/test14/test14.nsys-rep
+make[1]: Leaving directory '/root/block-scheduling/test14'
+mkdir -p result
+mv test14/test14.nsys-rep result/test14_V100.nsys-rep

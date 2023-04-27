@@ -1,0 +1,31 @@
+ifndef GPGPU
+	GPGPU := RTX3090
+endif
+
+ifeq ($(GPGPU), V100)
+	NVCCFLAGS := -arch=compute_70 -code=sm_70 --ptxas-options=-v -L../kernels -lkernels_70 -I../include -DV100
+endif
+
+ifeq ($(GPGPU), RTX2080TI)
+	NVCCFLAGS := -arch=compute_75 -code=sm_75 --ptxas-options=-v -L../kernels -lkernels_75 -I../include -DRTX2080TI
+endif
+
+ifeq ($(GPGPU), A100)
+	NVCCFLAGS := -arch=compute_80 -code=sm_80 --ptxas-options=-v -L../kernels -lkernels_80 -I../include -DA100
+endif
+
+ifeq ($(GPGPU), RTX3090)
+	NVCCFLAGS := -arch=compute_86 -code=sm_86 --ptxas-options=-v -L../kernels -lkernels_86 -I../include -DRTX3090
+endif
+
+all:
+	nvcc $(TEST).cu -o $(TEST) $(NVCCFLAGS)
+
+run:
+	./$(TEST)
+
+profile:
+	nsys profile -t cuda --stats false -f true -w true -o $(TEST) ./$(TEST)
+
+clean:
+	rm -f $(TEST) *.nsys-rep
