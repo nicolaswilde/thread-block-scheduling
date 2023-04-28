@@ -13,7 +13,7 @@ If local GPUs are not available, you can rent GPU servers used in this work:
 - select `Instance image` -> `Official image` -> `PyTorch 1.12.0` -> `Python 3.8` -> `Cuda 11.3`
 - then you can access the GPU server through ssh.
 
-CUDA 11.3 is already install on the GPU servers, but you still need to install nsight system:
+CUDA 11.3 is already installed on the GPU servers, but you still need to install nsight system:
 
 - download the nsight system installation package from https://developer.nvidia.com/downloads/assets/tools/secure/nsight-systems/2023_2/nsightsystems-linux-cli-public-2023.2.1.122-3259852.deb/ to your local computer
 - if the above link is not valid (version updated), you can click `download` on https://developer.nvidia.com/nsight-systems/get-started to download the installation package (Linux CLI only .deb Installer) to your local computer
@@ -33,6 +33,6 @@ CUDA 11.3 is already install on the GPU servers, but you still need to install n
 
 ### 3 Check the Experiment Results
 
-After execution, some information are printed in the terminal. You will find the profiling files in the directory `result`. You can download the profiling files to your local computer (if you are using GPU servers) and open the profiling files with a host version (with GUI) of nsight system.
+After execution, some information is printed on the terminal. You will find the profiling files in the directory `result`. You can download the profiling files to your local computer (if you are using GPU servers) and open the profiling files with a host version (with GUI) of nsight system.
 
-Following the workflow above, the authors provides the experiment results on V100, RTX2080Ti, A100, and RTX3090 at https://github.com/nicolaswilde/thread-block-scheduling/tree/main/my-result. You can check the log files and the nsys-rep files.
+Following the workflow above, the authors provide the experiment results on V100, RTX2080Ti, A100, and RTX3090 at https://github.com/nicolaswilde/thread-block-scheduling/tree/main/my-result. You can check the log files and the nsys-rep files.
